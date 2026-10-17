@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrintCraft — PDF workbench (design demo)</title>
+  <meta name="description" content="Minimal, runnable design demo of the PrintCraft PDF workbench UI: title bar, mode bar, tool panels, document area, rail and dialogs." />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <!-- App shell: four stacked bands (tab strip, mode bar, workspace, overlays) -->
+  <div class="app" id="app">
+    <!-- 1 ── Window chrome: tab strip -->
+    <header class="tabstrip" id="tabstrip" role="banner"></header>
+
+    <!-- 2 ── Mode bar: main menu, workspace modes, document actions, command search -->
+    <div class="modebar" id="modebar" role="toolbar"></div>
+
+    <!-- 3 ── Workspace: tool panel · document area · side panel · rail -->
+    <div class="workspace" id="workspace">
+      <aside class="panel-left" id="leftPanel" aria-label="All tools"></aside>
+      <main class="docarea" id="docArea" aria-label="Document area"></main>
+      <aside class="panel-right" id="rightPanel" aria-label="Side panel"></aside>
+      <nav class="rail" id="rail" aria-label="Panels and page navigation"></nav>
+    </div>
+  </div>
+
+  <!-- Overlays: transient, always above the workspace -->
+  <div id="overlays" class="overlays"></div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
